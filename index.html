@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sincrologia - Portal</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        /* Configurações Globais */
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #1a2a3a; /* Azul sóbrio */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-container {
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .logo-img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s, filter 1s;
+        }
+
+        .espiral-active {
+            transform: rotate(1440deg) scale(0);
+            opacity: 0;
+            filter: blur(5px);
+        }
+
+        footer {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px 20px 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid rgba(201, 164, 65, 0.4);
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+
+        .input-group {
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(201, 164, 65, 0.6);
+            padding: 15px;
+            color: white;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            max-width: 320px;
+            background-color: #c9a441;
+            color: #1a2a3a;
+            border: none;
+            padding: 16px;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #erro {
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            height: 20px;
+            margin-bottom: -5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <div class="logo-container" onclick="executarAcesso()">
+            <img src="logo-512.png" id="logoImg" class="logo-img" alt="Sincrologia Logo">
+        </div>
+    </div>
+
+    <footer>
+        <div id="erro">Dados inválidos. Verifique a senha.</div>
+        <div class="input-group">
+            <input type="text" id="usuario" placeholder="Utilizador" autocomplete="off">
+            <input type="password" id="senha" placeholder="Senha" autocomplete="off">
+        </div>
+        <button onclick="executarAcesso()">Acessar</button>
+    </footer>
+
+    <script>
+        // Registro do Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(() => {
+                console.log("Service Worker registrado com sucesso.");
+            }).catch((err) => {
+                console.log("Falha ao registrar Service Worker:", err);
+            });
+        }
+
+        function executarAcesso() {
+            const senhaInput = document.getElementById('senha').value;
+            const logo = document.getElementById('logoImg');
+            const erroMsg = document.getElementById('erro');
+
+            if (senhaInput === "charlesbravo1") {
+                erroMsg.style.display = "none";
+                logo.classList.add('espiral-active');
+                setTimeout(() => {
+                    window.location.href = "1.html";
+                }, 1500);
+            } else {
+                if(senhaInput !== "") {
+                    erroMsg.style.display = "block";
+                }
+            }
+        }
+
+        document.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') { executarAcesso(); }
+        });
+    </script>
+</body>
+</html>
