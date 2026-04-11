@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria 01 - Sincrologia</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 850px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .aula-img { width: 100%; max-width: 600px; display: block; margin: 25px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .pdf-box { background: #fff5f5; border: 1px solid #d32f2f; padding: 20px; border-radius: 5px; margin-bottom: 30px; text-align: center; }
+        .pdf-btn { background: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        /* Quiz Robusto */
+        .quiz-container { margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid var(--dourado); border-radius: 10px; }
+        .pergunta { font-weight: bold; margin: 20px 0 10px 0; display: block; color: var(--azul); border-left: 4px solid var(--dourado); padding-left: 10px; }
+        .opcao { display: block; margin-bottom: 8px; cursor: pointer; background: #f1f1f1; padding: 12px; border-radius: 6px; font-size: 0.95rem; }
+        .opcao:hover { background: #e9e9e9; }
+        .btn-finalizar { background: var(--azul); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        #resultado { margin-top: 25px; padding: 20px; border-radius: 5px; text-align: center; display: none; font-size: 1.2rem; }
+        #proxima-aula { display: none; text-align: center; margin-top: 25px; }
+        .btn-proxima { background: var(--dourado); color: var(--azul); padding: 18px; text-decoration: none; display: block; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MATÉRIA 01</h1>
+    <p style="letter-spacing: 1px;">A ONTOLOGIA DO ESTAR E A MANUTENÇÃO EXISTENCIAL</p>
+</header>
+
+<div class="content">
+    <div class="pdf-box">
+        <p><strong>Material de Apoio Técnico</strong></p>
+        <a href="material01.pdf" class="pdf-btn">📄 BAIXAR PDF (CONTEÚDO DENSO)</a>
+    </div>
+
+    <article>
+        <h2>Definição e Propósito</h2>
+        <p>A Sincrologia é a ciência que investiga as leis da transitoriedade humana. Ela se estabelece como um método de ajuste comportamental e emocional que prioriza a <strong>Qualificação do Estar</strong> em detrimento da busca utópica pelo "Ser" essencialista.</p>
+        
+        <img src="1-img.png" alt="Esquema Teórico" class="aula-img">
+
+        <p>O foco clínico é a Manutenção Existencial: o reconhecimento de que o homem é um sistema tridimensional (Corpo, Alma e Espírito) em constante movimento. A desarmonia entre esses setores gera o que chamamos de 'ruído existencial', que a Sincroterapia visa silenciar através de ajustes práticos e bíblicos.</p>
+    </article>
+
+    <div class="quiz-container">
+        <h3 style="text-align: center; color: var(--azul);">AVALIAÇÃO DE PROFICIÊNCIA</h3>
+        <p style="text-align: center; font-size: 0.8rem;">(Exigido Mínimo de 7 Acertos para Progressão)</p>
+        
+        <form id="quizForm">
+            <span class="pergunta">1. Qual é o conceito central da Sincrologia quanto à condição humana?</span>
+            <label class="opcao"><input type="radio" name="p1" value="1"> A Qualificação do Estar Transitório.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> A busca pelo "Ser" imutável e espiritual.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> A negação da existência material em favor da alma.</label>
+
+            <span class="pergunta">2. Por que o "Ser" é tratado como um atributo exclusivo da Divindade?</span>
+            <label class="opcao"><input type="radio" name="p2" value="1"> Porque o Ser implica autoexistência e permanência, algo que a criatura não possui.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> Porque o ser humano é puramente matéria e não possui essência.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> Por uma questão puramente semântica e gramatical.</label>
+
+            <span class="pergunta">3. A Sincrologia define o homem como um sistema:</span>
+            <label class="opcao"><input type="radio" name="p3" value="0"> Dualista (Corpo e Mente).</label>
+            <label class="opcao"><input type="radio" name="p3" value="1"> Tridimensional (Corpo, Alma e Espírito).</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> Monista (Apenas matéria organizada).</label>
+
+            <span class="pergunta">4. O que é a "Manutenção Existencial"?</span>
+            <label class="opcao"><input type="radio" name="p4" value="0"> A cura definitiva de todos os traumas psicológicos.</label>
+            <label class="opcao"><input type="radio" name="p4" value="1"> O ajuste constante dos setores da vida para manter a coerência no presente.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> Um conjunto de mantras para elevar a frequência espiritual.</label>
+
+            <span class="pergunta">5. Qual é a postura da Sincroterapia quanto ao uso de fármacos?</span>
+            <label class="opcao"><input type="radio" name="p5" value="1"> Não utiliza nem recomenda meios farmacológicos, homeopáticos ou gêneros.</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> Utiliza apenas remédios de base natural e ervas.</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> Recomenda o uso apenas em casos de depressão profunda.</label>
+
+            <span class="pergunta">6. A inspiração do método Sincrológico é:</span>
+            <label class="opcao"><input type="radio" name="p6" value="1"> Teísta e Psicobíblica.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> Laica e Filosófica.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> Esotérica e Cientificista.</label>
+
+            <span class="pergunta">7. Como a Sincrologia visualiza o sofrimento humano?</span>
+            <label class="opcao"><input type="radio" name="p7" value="1"> Como resultado da tentativa de tornar permanente o que é transitório.</label>
+            <label class="opcao"><input type="radio" name="p7" value="0"> Como uma punição por carmas de vidas passadas.</label>
+            <label class="opcao"><input type="radio" name="p7" value="0"> Como uma falha puramente química no cérebro.</label>
+
+            <span class="pergunta">8. O termo "Existente Terciário" refere-se a:</span>
+            <label class="opcao"><input type="radio" name="p8" value="1"> Seres que dependem de uma fonte externa para sua existência e manutenção.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> Seres que atingiram o terceiro nível de iluminação espiritual.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> Elementos inanimados da natureza.</label>
+
+            <span class="pergunta">9. Por que a Sincrologia evita o termo "filosofia"?</span>
+            <label class="opcao"><input type="radio" name="p9" value="1"> Para evitar confusão com conceitos laicos e antropocêntricos.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> Porque a filosofia é considerada proibida pela Bíblia.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> Porque a Sincrologia não possui base teórica.</label>
+
+            <span class="pergunta">10. O objetivo final do curso é formar:</span>
+            <label class="opcao"><input type="radio" name="p10" value="1"> Profissionais capazes de oferecer suporte emocional e comportamental prático e teísta.</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> Psicólogos clínicos com especialização em religião.</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> Mestres em teologia sistemática e filosofia bíblica.</label>
+
+            <button type="button" class="btn-finalizar" onclick="corrigir()">FINALIZAR E ENVIAR RESULTADO</button>
+        </form>
+
+        <div id="resultado"></div>
+        <div id="proxima-aula">
+            <p>Excelente aproveitamento. O status desta matéria foi atualizado no seu painel.</p>
+            <a href="5.html" class="btn-proxima">AVANÇAR PARA MATÉRIA 02</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function corrigir() {
+        const formulario = document.getElementById('quizForm');
+        const resp = new FormData(formulario);
+        let nota = 0;
+        let respondidas = 0;
+
+        for (let value of resp.values()) {
+            nota += parseInt(value);
+            respondidas++;
+        }
+
+        if(respondidas < 10) {
+            alert("Você precisa responder todas as 10 questões.");
+            return;
+        }
+
+        const resultado = document.getElementById('resultado');
+        const proxima = document.getElementById('proxima-aula');
+
+        resultado.style.display = "block";
+        if(nota >= 7) {
+            resultado.innerHTML = "APROVADO! NOTA: " + nota;
+            resultado.style.backgroundColor = "#d4edda";
+            resultado.style.color = "#155724";
+            proxima.style.display = "block";
+            localStorage.setItem('materia01', 'concluido');
+        } else {
+            resultado.innerHTML = "REPROVADO. NOTA: " + nota + "<br>Estude o PDF e tente novamente.";
+            resultado.style.backgroundColor = "#f8d7da";
+            resultado.style.color = "#721c24";
+        }
+    }
+</script>
+</body>
+</html>
