@@ -116,6 +116,11 @@
         </div>
 
         <div class="campo">
+            <label>CPF:</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+        </div>
+
+        <div class="campo">
             <label>WhatsApp (com DDD):</label>
             <input type="tel" id="whatsapp" placeholder="Ex: 66999999999" required>
         </div>
@@ -160,18 +165,29 @@
 </div>
 
 <script>
+    // PULO AUTOMÁTICO: Se já estiver inscrito, vai direto para a próxima página
+    window.onload = function() {
+        if (localStorage.getItem('sincro_inscrito') === 'true') {
+            window.location.href = "2.html";
+        }
+    };
+
     function enviarInscricao() {
         const nome = document.getElementById('nome').value;
+        const cpf = document.getElementById('cpf').value;
         const zap = document.getElementById('whatsapp').value;
         const aceite = document.getElementById('aceite').checked;
 
-        if(!nome || !zap || !aceite) {
-            alert("Por favor, preencha os dados e aceite os termos.");
+        if(!nome || !cpf || !zap || !aceite) {
+            alert("Por favor, preencha os dados (incluindo CPF) e aceite os termos.");
             return;
         }
 
+        // MARCAÇÃO DE SUCESSO: Salva no aparelho que o aluno já preencheu a ficha
+        localStorage.setItem('sincro_inscrito', 'true');
+
         // Monta a mensagem para o WhatsApp
-        const mensagem = `Olá! Realizei minha inscrição na Formação Sincro.\nNome: ${nome}\nWhatsApp: ${zap}`;
+        const mensagem = `Olá! Realizei minha inscrição na Formação Sincro.\nNome: ${nome}\nCPF: ${cpf}\nWhatsApp: ${zap}`;
         const wpUrl = `https://wa.me/5566984666186?text=${encodeURIComponent(mensagem)}`;
 
         // Abre o WhatsApp em uma nova aba

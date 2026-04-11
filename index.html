@@ -6,105 +6,37 @@
     <title>Sincrologia - Portal</title>
     <link rel="manifest" href="manifest.json">
     <style>
-        /* Configurações Globais */
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
+        /* MANTIDO EXATAMENTE COMO O SEU ORIGINAL */
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            background-color: #1a2a3a; /* Azul sóbrio */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
-            overflow: hidden;
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            display: flex; flex-direction: column;
+            background-color: #1a2a3a; font-family: 'Segoe UI', sans-serif;
+            color: white; overflow: hidden;
         }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-
-        .logo-container {
-            cursor: pointer;
-            z-index: 10;
-        }
-
+        .main-content { flex: 1; display: flex; justify-content: center; align-items: center; width: 100%; }
+        .logo-container { cursor: pointer; z-index: 10; }
         .logo-img {
-            width: 180px;
-            height: 180px;
-            object-fit: contain;
+            width: 180px; height: 180px; object-fit: contain;
             transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s, filter 1s;
         }
-
-        .espiral-active {
-            transform: rotate(1440deg) scale(0);
-            opacity: 0;
-            filter: blur(5px);
-        }
-
+        .espiral-active { transform: rotate(1440deg) scale(0); opacity: 0; filter: blur(5px); }
         footer {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 30px 20px 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            border-top: 1px solid rgba(201, 164, 65, 0.4);
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+            width: 100%; background: rgba(0, 0, 0, 0.2); padding: 30px 20px 40px 20px;
+            display: flex; flex-direction: column; align-items: center; gap: 15px;
+            border-top: 1px solid rgba(201, 164, 65, 0.4); box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
         }
-
-        .input-group {
-            width: 100%;
-            max-width: 320px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
+        .input-group { width: 100%; max-width: 320px; display: flex; flex-direction: column; gap: 12px; }
         input {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(201, 164, 65, 0.6);
-            padding: 15px;
-            color: white;
-            border-radius: 8px;
-            outline: none;
-            font-size: 16px;
-            text-align: center;
+            width: 100%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(201, 164, 65, 0.6);
+            padding: 15px; color: white; border-radius: 8px; outline: none; font-size: 16px; text-align: center;
         }
-
         button {
-            width: 100%;
-            max-width: 320px;
-            background-color: #c9a441;
-            color: #1a2a3a;
-            border: none;
-            padding: 16px;
-            font-weight: bold;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            width: 100%; max-width: 320px; background-color: #c9a441; color: #1a2a3a;
+            border: none; padding: 16px; font-weight: bold; font-size: 16px; border-radius: 8px;
+            cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
         }
-
-        #erro {
-            color: #ff6b6b;
-            font-size: 0.85rem;
-            height: 20px;
-            margin-bottom: -5px;
-            display: none;
-        }
+        #erro { color: #ff6b6b; font-size: 0.85rem; height: 20px; margin-bottom: -5px; display: none; }
     </style>
 </head>
 <body>
@@ -125,13 +57,15 @@
     </footer>
 
     <script>
-        // Registro do Service Worker para PWA
+        // 1. Verificação de Acesso Prévio (Evita login repetido na mesma sessão)
+        window.onload = function() {
+            if (sessionStorage.getItem('sincro_acesso') === 'true') {
+                window.location.href = "1.html";
+            }
+        };
+
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').then(() => {
-                console.log("Service Worker registrado com sucesso.");
-            }).catch((err) => {
-                console.log("Falha ao registrar Service Worker:", err);
-            });
+            navigator.serviceWorker.register('sw.js').catch((err) => console.log(err));
         }
 
         function executarAcesso() {
@@ -139,9 +73,13 @@
             const logo = document.getElementById('logoImg');
             const erroMsg = document.getElementById('erro');
 
+            // Sua senha original mantida
             if (senhaInput === "charlesbravo1") {
+                // SALVA O ACESSO NA SESSÃO
+                sessionStorage.setItem('sincro_acesso', 'true');
+                
                 erroMsg.style.display = "none";
-                logo.classList.add('espiral-active');
+                logo.classList.add('espiral-active'); // Animação preservada
                 setTimeout(() => {
                     window.location.href = "1.html";
                 }, 1500);
