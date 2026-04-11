@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria 06 - Sincrologia</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 850px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .aula-img { width: 100%; max-width: 600px; display: block; margin: 25px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .pdf-box { background: #fff5f5; border: 1px solid #d32f2f; padding: 20px; border-radius: 5px; margin-bottom: 30px; text-align: center; }
+        .pdf-btn { background: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        .quiz-container { margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid var(--dourado); border-radius: 10px; }
+        .pergunta { font-weight: bold; margin: 20px 0 10px 0; display: block; color: var(--azul); border-left: 4px solid var(--dourado); padding-left: 10px; }
+        .opcao { display: block; margin-bottom: 8px; cursor: pointer; background: #f1f1f1; padding: 12px; border-radius: 6px; font-size: 0.95rem; }
+        .btn-finalizar { background: var(--azul); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        #resultado { margin-top: 25px; padding: 20px; border-radius: 5px; text-align: center; display: none; font-size: 1.2rem; }
+        #proxima-aula { display: none; text-align: center; margin-top: 25px; }
+        .btn-proxima { background: var(--dourado); color: var(--azul); padding: 18px; text-decoration: none; display: block; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MATÉRIA 06</h1>
+    <p style="letter-spacing: 1px;">CONDIÇÕES DE ESTADO: A DINÂMICA DO ESTAR</p>
+</header>
+
+<div class="content">
+    <div class="pdf-box">
+        <p><strong>Material de Apoio Bíblico</strong></p>
+        <a href="material06.pdf" class="pdf-btn">📄 BAIXAR PDF (CONDIÇÕES DE ESTADO)</a>
+    </div>
+
+    <article>
+        <h2>O Estado como Variável Gerenciável</h2>
+        <p>Na Sincrologia Bíblica, as "Condições de Estado" referem-se às circunstâncias transitórias que influenciam o nosso Estar. O <strong>formando</strong> deve aprender a discernir entre o que é uma lei fixa (Secundário) e o que é uma condição passageira de estado.</p>
+        
+        <img src="6-img.png" alt="Esquema Condições de Estado" class="aula-img">
+
+        <p>O desenvolvimento pessoal reside na capacidade de manter a manutenção existencial mesmo sob condições adversas, qualificando o Estar através do suporte emocional que a Palavra oferece para cada situação.</p>
+    </article>
+
+    <div class="quiz-container">
+        <h3 style="text-align: center; color: var(--azul);">AVALIAÇÃO DE PROFICIÊNCIA</h3>
+        
+        <form id="quizForm">
+            <span class="pergunta">1. O que são as "Condições de Estado" na Sincrologia?</span>
+            <label class="opcao"><input type="radio" name="p1" value="1"> A) Variáveis transitórias e passageiras que afetam o equilíbrio do Estar.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> B) Decretos eternos e imutáveis sobre o destino do formando.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> C) Características físicas herdadas que não podem ser alteradas.</label>
+
+            <span class="pergunta">2. Qual é a principal diferença entre o Existente Secundário e a Condição de Estado?</span>
+            <label class="opcao"><input type="radio" name="p2" value="0"> A) Não há diferença; ambos tratam das leis da natureza.</label>
+            <label class="opcao"><input type="radio" name="p2" value="1"> B) O Secundário é a lei fixa (trilho), enquanto o Estado é o momento (clima).</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> C) O Estado é ditado pelo Criador, e o Secundário pelo homem.</label>
+
+            <span class="pergunta">3. A gestão emocional eficaz permite que o formando:</span>
+            <label class="opcao"><input type="radio" name="p3" value="0"> A) Elimine todas as condições adversas de sua vida imediatamente.</label>
+            <label class="opcao"><input type="radio" name="p3" value="1"> B) Qualifique seu Estar independentemente da condição momentânea.</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> C) Ignore a realidade física para viver em um estado mental isolado.</label>
+
+            <span class="pergunta">4. Quando uma condição de estado gera ruído existencial?</span>
+            <label class="opcao"><input type="radio" name="p4" value="1"> A) Quando o Terciário permite que a condição governe sua tridimensionalidade.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> B) Quando o formando busca suporte nas diretrizes bíblicas.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> C) Sempre que a condição de estado for desconfortável ou triste.</label>
+
+            <span class="pergunta">5. O "Estar em Paz" é definido na Sincrologia como:</span>
+            <label class="opcao"><input type="radio" name="p5" value="0"> A) Uma condição permanente que se alcança apenas uma vez.</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> B) A ausência total de conflitos ou responsabilidades externas.</label>
+            <label class="opcao"><input type="radio" name="p5" value="1"> C) Um estado de sincronia entre corpo, alma e espírito sob as leis do Criador.</label>
+
+            <span class="pergunta">6. Diante de uma condição de estado negativa, o suporte emocional bíblico foca em:</span>
+            <label class="opcao"><input type="radio" name="p6" value="1"> A) Ajustar o comportamento e a perspectiva do formando para a manutenção existencial.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> B) Usar técnicas de visualização para mudar a realidade física.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> C) Encontrar culpados externos para o estado de sofrimento.</label>
+
+            <span class="pergunta">7. A transitoriedade das condições de estado serve para lembrar que:</span>
+            <label class="opcao"><input type="radio" name="p7" value="0"> A) Nada do que fazemos tem importância real.</label>
+            <label class="opcao"><input type="radio" name="p7" value="1"> B) O sofrimento ou a euforia do momento não definem quem nós somos.</label>
+            <label class="opcao"><input type="radio" name="p7" value="0"> C) Devemos lutar para tornar as condições boas permanentes.</label>
+
+            <span class="pergunta">8. O "Ajuste Sincrológico" nas condições de estado visa:</span>
+            <label class="opcao"><input type="radio" name="p8" value="1"> A) Trazer o Estar de volta à harmonia com a ordem ontológica.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> B) Substituir a fé bíblica por conceitos de autoajuda laica.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> C) Garantir que o formando nunca mais mude seu estado emocional.</label>
+
+            <span class="pergunta">9. Como o formando identifica um desalinhamento de estado?</span>
+            <label class="opcao"><input type="radio" name="p9" value="0"> A) Através da observação do sucesso financeiro imediato.</label>
+            <label class="opcao"><input type="radio" name="p9" value="1"> B) Pela presença de ruídos, angústias e falta de sincronia interna.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> C) Comparando sua vida com a de outros formandos.</label>
+
+            <span class="pergunta">10. A manutenção existencial nas Condições de Estado é um exercício:</span>
+            <label class="opcao"><input type="radio" name="p10" value="1"> A) Contínuo e diário, focado na gestão do aqui e agora.</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> B) Que se faz apenas em momentos de crise profunda.</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> C) Puramente intelectual e sem aplicação prática no corpo.</label>
+
+            <button type="button" class="btn-finalizar" onclick="corrigir()">FINALIZAR AVALIAÇÃO</button>
+        </form>
+
+        <div id="resultado"></div>
+        <div id="proxima-aula">
+            <a href="10.html" class="btn-proxima">AVANÇAR PARA MATÉRIA 07</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function corrigir() {
+        const resp = new FormData(document.getElementById('quizForm'));
+        let nota = 0; let total = 0;
+        for (let v of resp.values()) { nota += parseInt(v); total++; }
+
+        if(total < 10) { alert("Responda todas as 10 questões."); return; }
+
+        const resDiv = document.getElementById('resultado');
+        resDiv.style.display = "block";
+        if(nota >= 7) {
+            resDiv.innerHTML = "APROVADO! NOTA: " + nota;
+            resDiv.style.background = "#d4edda";
+            resDiv.style.color = "#155724";
+            document.getElementById('proxima-aula').style.display = "block";
+            localStorage.setItem('materia06', 'concluido');
+        } else {
+            resDiv.innerHTML = "REPROVADO. NOTA: " + nota + "<br>Estude o suporte emocional nas condições de estado.";
+            resDiv.style.background = "#f8d7da";
+            resDiv.style.color = "#721c24";
+        }
+    }
+</script>
+</body>
+</html>

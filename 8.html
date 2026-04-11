@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria 05 - Sincrologia</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 850px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .aula-img { width: 100%; max-width: 600px; display: block; margin: 25px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .pdf-box { background: #fff5f5; border: 1px solid #d32f2f; padding: 20px; border-radius: 5px; margin-bottom: 30px; text-align: center; }
+        .pdf-btn { background: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        .quiz-container { margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid var(--dourado); border-radius: 10px; }
+        .pergunta { font-weight: bold; margin: 20px 0 10px 0; display: block; color: var(--azul); border-left: 4px solid var(--dourado); padding-left: 10px; }
+        .opcao { display: block; margin-bottom: 8px; cursor: pointer; background: #f1f1f1; padding: 12px; border-radius: 6px; font-size: 0.95rem; }
+        .btn-finalizar { background: var(--azul); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        #resultado { margin-top: 25px; padding: 20px; border-radius: 5px; text-align: center; display: none; font-size: 1.2rem; }
+        #proxima-aula { display: none; text-align: center; margin-top: 25px; }
+        .btn-proxima { background: var(--dourado); color: var(--azul); padding: 18px; text-decoration: none; display: block; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MATÉRIA 05</h1>
+    <p style="letter-spacing: 1px;">ONTOLOGIA HEBRAICA: A HIERARQUIA DOS EXISTENTES</p>
+</header>
+
+<div class="content">
+    <div class="pdf-box">
+        <p><strong>Material de Apoio Bíblico</strong></p>
+        <a href="material05.pdf" class="pdf-btn">📄 BAIXAR PDF (ONTOLOGIA HEBRAICA)</a>
+    </div>
+
+    <article>
+        <h2>A Ordem do Existir</h2>
+        <p>A Ontologia Hebraica na Sincrologia estabelece que a paz emocional depende do reconhecimento da nossa posição na hierarquia da criação. O <strong>formando</strong> deve compreender que não possui vida própria, mas "está" vivo por concessão.</p>
+        
+        <img src="5-img.png" alt="Esquema Ontologia Hebraica" class="aula-img">
+
+        <p>Identificar o Existente Primário (O Criador), o Secundário (As Leis) e o Terciário (O Homem) é o que permite silenciar a ansiedade de controle e focar na gestão do comportamento real.</p>
+    </article>
+
+    <div class="quiz-container">
+        <h3 style="text-align: center; color: var(--azul);">AVALIAÇÃO DE PROFICIÊNCIA</h3>
+        
+        <form id="quizForm">
+            <span class="pergunta">1. Quem é definido como o Existente Primário na Sincrologia?</span>
+            <label class="opcao"><input type="radio" name="p1" value="0"> A) O ser humano em seu estado de espírito pleno.</label>
+            <label class="opcao"><input type="radio" name="p1" value="1"> B) O Criador, a única fonte autoexistente de vida.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> C) As leis físicas que governam o universo.</label>
+
+            <span class="pergunta">2. O que representa o Existente Secundário?</span>
+            <label class="opcao"><input type="radio" name="p2" value="1"> A) As leis naturais, biológicas e espirituais estabelecidas.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> B) A alma do homem após o suporte emocional.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> C) O passado do formando que deve ser superado.</label>
+
+            <span class="pergunta">3. Por que o homem é classificado como Existente Terciário?</span>
+            <label class="opcao"><input type="radio" name="p3" value="0"> A) Porque é o terceiro ser na escala de importância social.</label>
+            <label class="opcao"><input type="radio" name="p3" value="1"> B) Porque sua existência é derivada e dependente de leis externas.</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> C) Porque possui três partes: mente, cérebro e corpo.</label>
+
+            <span class="pergunta">4. Na Ontologia Hebraica, o termo "Ser" aplica-se exclusivamente a:</span>
+            <label class="opcao"><input type="radio" name="p4" value="1"> A) O Primário (Deus), pois Ele é o único que "É".</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> B) O Terciário (Homem), quando este atinge a iluminação.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> C) Ambos, desde que estejam em sincronia total.</label>
+
+            <span class="pergunta">5. Qual é a principal causa de colapso na gestão emocional do Terciário?</span>
+            <label class="opcao"><input type="radio" name="p5" value="0"> A) Obedecer rigorosamente às leis do Existente Secundário.</label>
+            <label class="opcao"><input type="radio" name="p5" value="1"> B) Tentar ocupar o lugar do Primário, buscando controle absoluto.</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> C) Aceitar a transitoriedade do seu estado de "Estar".</label>
+
+            <span class="pergunta">6. A Qualificação do Estar depende de:</span>
+            <label class="opcao"><input type="radio" name="p6" value="1"> A) Estar em harmonia com as leis (Secundário) e com o Criador (Primário).</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> B) Desenvolver técnicas de autossuficiência e independência total.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> C) Ignorar a hierarquia e focar apenas nas necessidades do corpo.</label>
+
+            <span class="pergunta">7. O ruído existencial surge quando o Terciário:</span>
+            <label class="opcao"><input type="radio" name="p7" value="0"> A) Reconhece sua dependência e limitações físicas.</label>
+            <label class="opcao"><input type="radio" name="p7" value="0"> B) Gere suas emoções com base nas diretrizes bíblicas.</label>
+            <label class="opcao"><input type="radio" name="p7" value="1"> C) Tenta ignorar as leis naturais ou a soberania do Primário.</label>
+
+            <span class="pergunta">8. Como a Sincrologia define a vida humana?</span>
+            <label class="opcao"><input type="radio" name="p8" value="1"> A) Como um estado de "Estar" transitório e concedido.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> B) Como um atributo eterno inerente ao espírito humano.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> C) Como um acidente físico sem propósito ontológico.</label>
+
+            <span class="pergunta">9. O papel do formando diante do Existente Secundário é:</span>
+            <label class="opcao"><input type="radio" name="p9" value="1"> A) Ajustar seu comportamento para fluir dentro dessas leis.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> B) Tentar alterar as leis através do poder da mente.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> C) Criar suas próprias leis de conduta e moralidade.</label>
+
+            <span class="pergunta">10. O objetivo final do estudo da Ontologia Hebraica é:</span>
+            <label class="opcao"><input type="radio" name="p10" value="0"> A) Tornar o formando um teólogo profissional.</label>
+            <label class="opcao"><input type="radio" name="p10" value="1"> B) Proporcionar paz através do reconhecimento da ordem correta da vida.</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> C) Eliminar a necessidade de suporte emocional no futuro.</label>
+
+            <button type="button" class="btn-finalizar" onclick="corrigir()">FINALIZAR AVALIAÇÃO</button>
+        </form>
+
+        <div id="resultado"></div>
+        <div id="proxima-aula">
+            <a href="9.html" class="btn-proxima">AVANÇAR PARA MATÉRIA 06</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function corrigir() {
+        const resp = new FormData(document.getElementById('quizForm'));
+        let nota = 0; let total = 0;
+        for (let v of resp.values()) { nota += parseInt(v); total++; }
+
+        if(total < 10) { alert("Responda todas as 10 questões."); return; }
+
+        const resDiv = document.getElementById('resultado');
+        resDiv.style.display = "block";
+        if(nota >= 7) {
+            resDiv.innerHTML = "APROVADO! NOTA: " + nota;
+            resDiv.style.background = "#d4edda";
+            resDiv.style.color = "#155724";
+            document.getElementById('proxima-aula').style.display = "block";
+            localStorage.setItem('materia05', 'concluido');
+        } else {
+            resDiv.innerHTML = "REPROVADO. NOTA: " + nota + "<br>Revise a hierarquia dos existentes e tente novamente.";
+            resDiv.style.background = "#f8d7da";
+            resDiv.style.color = "#721c24";
+        }
+    }
+</script>
+</body>
+</html>
