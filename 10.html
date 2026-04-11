@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria 07 - Sincrologia</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 850px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .aula-img { width: 100%; max-width: 600px; display: block; margin: 25px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .pdf-box { background: #fff5f5; border: 1px solid #d32f2f; padding: 20px; border-radius: 5px; margin-bottom: 30px; text-align: center; }
+        .pdf-btn { background: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        .quiz-container { margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid var(--dourado); border-radius: 10px; }
+        .pergunta { font-weight: bold; margin: 20px 0 10px 0; display: block; color: var(--azul); border-left: 4px solid var(--dourado); padding-left: 10px; }
+        .opcao { display: block; margin-bottom: 8px; cursor: pointer; background: #f1f1f1; padding: 12px; border-radius: 6px; font-size: 0.95rem; }
+        .btn-finalizar { background: var(--azul); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        #resultado { margin-top: 25px; padding: 20px; border-radius: 5px; text-align: center; display: none; font-size: 1.2rem; }
+        #proxima-aula { display: none; text-align: center; margin-top: 25px; }
+        .btn-proxima { background: var(--dourado); color: var(--azul); padding: 18px; text-decoration: none; display: block; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MATÉRIA 07</h1>
+    <p style="letter-spacing: 1px;">RUÍDO EXISTENCIAL: O SINAL DE ALERTA DO ENSINO SINCROLÓGICO</p>
+</header>
+
+<div class="content">
+    <div class="pdf-box">
+        <p><strong>Material Didático de Apoio</strong></p>
+        <a href="material07.pdf" class="pdf-btn">📄 BAIXAR PDF (RUÍDO EXISTENCIAL)</a>
+    </div>
+
+    <article>
+        <h2>Ensino e Identificação da Interferência</h2>
+        <p>O Ruído Existencial é a dissonância identificada quando se opera fora das leis do Existente Secundário. Este módulo de ensino capacita o <strong>formando</strong> a reconhecer tecnicamente as causas do desalinhamento comportamental.</p>
+        
+        <img src="7-img.png" alt="Esquema Educativo Ruído Existencial" class="aula-img">
+
+        <p>O objetivo deste material de formação é fornecer a base teórica para que o formando identifique o ruído como um diagnóstico técnico, permitindo o retorno à sincronia por meio das Diretrizes Sincrológicas e da fundamentação bíblica.</p>
+    </article>
+
+    <div class="quiz-container">
+        <h3 style="text-align: center; color: var(--azul);">AVALIAÇÃO DE FORMAÇÃO</h3>
+        
+        <form id="quizForm">
+            <span class="pergunta">1. No ensino sincrológico, o que define o "Ruído Existencial"?</span>
+            <label class="opcao"><input type="radio" name="p1" value="1"> A) A dissonância técnica entre a conduta e as leis da existência.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> B) Uma patologia mental que exige tratamento clínico isolado.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> C) Um conceito laico extraído da filosofia moderna.</label>
+
+            <span class="pergunta">2. Qual a função didática do Ruído Existencial para o formando?</span>
+            <label class="opcao"><input type="radio" name="p2" value="0"> A) Atuar como punição moral pelos erros cometidos.</label>
+            <label class="opcao"><input type="radio" name="p2" value="1"> B) Servir como sinalizador de que é necessário realinhamento técnico.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> C) Estimular a busca por métodos de meditação oriental.</label>
+
+            <span class="pergunta">3. O ruído manifesta-se no Terciário quando:</span>
+            <label class="opcao"><input type="radio" name="p3" value="1"> A) Ocorre a tentativa de assumir variáveis que pertencem ao Primário.</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> B) O comportamento está em plena harmonia com as leis naturais.</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> C) O indivíduo aplica corretamente as Diretrizes Sincrológicas.</label>
+
+            <span class="pergunta">4. Segundo o método, o ruído deve ser corrigido com:</span>
+            <label class="opcao"><input type="radio" name="p4" value="1"> A) Ajuste comportamental fundamentado na inspiração bíblica.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> B) Práticas esotéricas de mantras ou yoga.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> C) Discussões de conceitos filosóficos laicos.</label>
+
+            <span class="pergunta">5. Um dos indicadores do Ruído Existencial é:</span>
+            <label class="opcao"><input type="radio" name="p5" value="0"> A) A manutenção da paz interna constante.</label>
+            <label class="opcao"><input type="radio" name="p5" value="1"> B) A ansiedade gerada pelo desalinhamento com a realidade presente.</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> C) O sucesso material absoluto e sem conflitos.</label>
+
+            <span class="pergunta">6. Para neutralizar o ruído, a Formação Sincrológica ensina a:</span>
+            <label class="opcao"><input type="radio" name="p6" value="1"> A) Identificar o ponto de falha na hierarquia ontológica.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> B) Ignorar os fatos e focar em pensamentos positivos.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> C) Substituir a Bíblia por manuais de autoajuda tradicionais.</label>
+
+            <span class="pergunta">7. A base central para a correção do ruído é:</span>
+            <label class="opcao"><input type="radio" name="p7" value="0"> A) A busca pelo "Ser" absoluto e imutável.</label>
+            <label class="opcao"><input type="radio" name="p7" value="1"> B) A qualificação da conduta dentro da transitoriedade.</label>
+            <label class="opcao"><input type="radio" name="p7" value="0"> C) A aceitação passiva de qualquer condição de estado.</label>
+
+            <span class="pergunta">8. Por que o idealismo utópico é combatido no ensino sincrológico?</span>
+            <label class="opcao"><input type="radio" name="p8" value="1"> A) Porque gera ruído ao projetar a vida para o que não é gerenciável.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> B) Porque a Sincrologia não aceita o progresso do formando.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> C) Porque o idealismo é um termo proibido nas diretrizes.</label>
+
+            <span class="pergunta">9. A harmonia existencial ocorre quando:</span>
+            <label class="opcao"><input type="radio" name="p9" value="1"> A) A conduta humana está alinhada às leis do Criador.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> B) O indivíduo torna-se totalmente autossuficiente e isolado.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> C) O ruído é suprimido através de técnicas psicológicas laicas.</label>
+
+            <span class="pergunta">10. O conteúdo da Matéria 07 tem como objetivo final:</span>
+            <label class="opcao"><input type="radio" name="p10" value="0"> A) O tratamento sincroterapêutico individualizado.</label>
+            <label class="opcao"><input type="radio" name="p10" value="1"> B) A formação técnica do aluno para o gerenciamento de ruídos.</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> C) A introdução a conceitos de astrologia e carma.</label>
+
+            <button type="button" class="btn-finalizar" onclick="corrigir()">FINALIZAR AVALIAÇÃO</button>
+        </form>
+
+        <div id="resultado"></div>
+        <div id="proxima-aula">
+            <a href="11.html" class="btn-proxima">AVANÇAR PARA MATÉRIA 08</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function corrigir() {
+        const resp = new FormData(document.getElementById('quizForm'));
+        let nota = 0; let total = 0;
+        for (let v of resp.values()) { nota += parseInt(v); total++; }
+
+        if(total < 10) { alert("Responda todas as 10 questões."); return; }
+
+        const resDiv = document.getElementById('resultado');
+        resDiv.style.display = "block";
+        if(nota >= 7) {
+            resDiv.innerHTML = "APROVADO! NOTA: " + nota;
+            resDiv.style.background = "#d4edda";
+            resDiv.style.color = "#155724";
+            document.getElementById('proxima-aula').style.display = "block";
+            localStorage.setItem('materia07', 'concluido');
+        } else {
+            resDiv.innerHTML = "REPROVADO. NOTA: " + nota + "<br>Revise os conceitos técnicos de identificação de ruído.";
+            resDiv.style.background = "#f8d7da";
+            resDiv.style.color = "#721c24";
+        }
+    }
+</script>
+</body>
+</html>
