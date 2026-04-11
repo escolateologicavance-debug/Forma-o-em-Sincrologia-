@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estágio e Habilitação - Sincrologia</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; --vermelho: #d32f2f; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 950px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { color: var(--azul); border-bottom: 2px solid var(--dourado); padding-bottom: 5px; margin-top: 30px; }
+        .box-estagio { background: #f9f9f9; border-left: 5px solid var(--azul); padding: 15px; margin: 15px 0; }
+        .alerta-aprovacao { background: #fff5f5; border: 1px solid var(--vermelho); padding: 20px; border-radius: 5px; color: var(--vermelho); font-weight: bold; text-align: center; margin: 20px 0; }
+        
+        /* Estilo dos Botões */
+        .grid-links { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+        .btn-link { display: block; text-align: center; padding: 15px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; font-size: 1rem; }
+        .btn-calculadora { background: var(--azul); color: white; }
+        .btn-imprimir { background: var(--dourado); color: var(--azul); }
+        .btn-email { background: #2e7d32; color: white; grid-column: span 2; }
+        
+        /* Estilo dos Formulários para Impressão */
+        .form-tecnico { display: none; margin-top: 50px; border: 2px solid #333; padding: 30px; }
+        .form-tecnico h3 { text-align: center; text-transform: uppercase; border-bottom: 2px solid #333; }
+        .campo { margin-bottom: 15px; border-bottom: 1px solid #ccc; padding: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table, th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+
+        @media print { 
+            .no-print { display: none; } 
+            .content { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
+            .form-tecnico { display: block; page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="no-print">
+    <h1>ESTÁGIO SUPERVISIONADO</h1>
+    <p>FASE PRÁTICA E HABILITAÇÃO PARA O OFÍCIO</p>
+</header>
+
+<div class="content">
+    <section class="no-print">
+        <h2>3. Estágio Supervisionado – 4 Meses</h2>
+        <div class="box-estagio">
+            <strong>Meses 1, 2 e 3:</strong> Avaliação Clínica de 3 Pessoas (21 dias cada).
+            <strong>4º Mês:</strong> Relatório Clínico Descritivo (Substitui o TCC).
+        </div>
+
+        <h2>4. Sistema de Aprovação do Curso</h2>
+        <div class="alerta-aprovacao">
+            A HABILITAÇÃO DEPENDE DO DESEMPENHO TEÓRICO (MÉDIA 7.0) + DESEMPENHO PRÁTICO (RELATÓRIO CLÍNICO).
+        </div>
+
+        <div class="grid-links">
+            <a href="https://escolateologicavance-debug.github.io/terapeuta-digital/" target="_blank" class="btn-link btn-calculadora">🧮 ABRIR CALCULADORA SC</a>
+            <button onclick="window.print()" class="btn-link btn-imprimir">🖨️ IMPRIMIR FORMULÁRIOS TÉCNICOS</button>
+            <a href="mailto:escolateologicavance@gmail.com" class="btn-link btn-email">📧 ENVIAR RELATÓRIO: escolateologicavance@gmail.com</a>
+        </div>
+    </section>
+
+    <div class="form-tecnico" id="form-anamnese">
+        <h3>Formulário de Anamnese Sincrológica</h3>
+        <div class="campo"><strong>Estagiário(a):</strong> _____________________________________________________</div>
+        <div class="campo"><strong>Paciente Voluntário:</strong> ________________________________ Data: ___/___/___</div>
+        <div class="campo"><strong>Idade:</strong> ________ <strong>Profissão:</strong> ______________________________________</div>
+        
+        <h4>Histórico de Manutenção Biológica</h4>
+        <div class="campo"><strong>Uso de Antiparasitário (Data/Tipo):</strong> __________________________________________</div>
+        <div class="campo"><strong>Qualidade do Sono/Alimentação:</strong> _____________________________________________</div>
+
+        <h4>Avaliação de Ruído Inicial</h4>
+        <div class="campo"><strong>Queixa Principal (Ruído Existencial):</strong> _________________________________________</div>
+        <p><em>Notas Iniciais (0-10):</em> Ordem: ___ | Disciplina: ___ | Reação: ___ | Paz: ___</p>
+        <div class="campo"><strong>Ponto de Ruptura Identificado (Menor Nota):</strong> _________________________________</div>
+    </div>
+
+    <div class="form-tecnico" id="form-acompanhamento">
+        <h3>Acompanhamento do Paciente Voluntário (Ciclo 21 Dias)</h3>
+        <div class="campo"><strong>Estagiário(a):</strong> _____________________________________________________</div>
+        <div class="campo"><strong>Paciente:</strong> __________________________________________ <strong>Semana:</strong> 1ª ( ) 2ª ( ) 3ª ( )</div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">Data</th>
+                    <th width="15%">P11 (Score)</th>
+                    <th>Descrição do Acompanhamento / Ocorrências Sincroterapêuticas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>___/___</td><td>_______</td><td><br><br></td></tr>
+                <tr><td>___/___</td><td>_______</td><td><br><br></td></tr>
+                <tr><td>___/___</td><td>_______</td><td><br><br></td></tr>
+                <tr><td>___/___</td><td>_______</td><td><br><br></td></tr>
+            </tbody>
+        </table>
+        
+        <h4>Ajustes e Orientações Prescritas:</h4>
+        <div class="campo">_________________________________________________________________________________</div>
+        <div class="campo">_________________________________________________________________________________</div>
+    </div>
+</div>
+
+<footer class="no-print">
+    <hr>
+    <strong>SINCROLOGIA</strong> | "Manutenção Existencial"<br>
+    <strong>FORMAÇÃO SINCRO</strong>
+</footer>
+
+</body>
+</html>
