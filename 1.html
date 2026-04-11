@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Sincrologia</title>
+    <style>
+        :root {
+            --azul-escuro: #1a2a3a;
+            --dourado: #c9a441;
+            --gelo: #f4f4f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--gelo);
+            color: var(--azul-escuro);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        h1 { margin: 0; font-size: 1.8rem; letter-spacing: 2px; }
+        .subtitle { font-style: italic; font-size: 0.9rem; color: var(--dourado); }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h2 { border-bottom: 2px solid var(--dourado); padding-bottom: 10px; font-size: 1.4rem; }
+
+        .campo { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+        
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .termos-box {
+            height: 150px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #f9f9f9;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover { background-color: #2c455f; }
+
+        .footer-info {
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            color: #666;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SINCROLOGIA</h1>
+    <div class="subtitle">"Manutenção Existencial"</div>
+    <div style="margin-top: 10px; font-weight: bold;">FORMAÇÃO SINCRO</div>
+</header>
+
+<div class="form-container">
+    <h2>Ficha de Inscrição</h2>
+    
+    <form id="formInscricao">
+        <div class="campo">
+            <label>Nome Completo:</label>
+            <input type="text" id="nome" required>
+        </div>
+
+        <div class="campo">
+            <label>WhatsApp (com DDD):</label>
+            <input type="tel" id="whatsapp" placeholder="Ex: 66999999999" required>
+        </div>
+
+        <div class="campo">
+            <label>E-mail:</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label>Cidade/Estado:</label>
+            <input type="text" id="localidade" required>
+        </div>
+
+        <div class="campo">
+            <label>Atuação Profissional / Eclesiástica:</label>
+            <input type="text" id="atuacao">
+        </div>
+
+        <h3>Termos e Condições</h3>
+        <div class="termos-box">
+            <strong>CONTRATO DE ADESÃO - FORMAÇÃO SINCRO:</strong><br><br>
+            1. DO OBJETO: O presente termo regula a inscrição no curso intensivo de Sincrologia.<br>
+            2. DOS VALORES: O valor da matrícula poderá ser devolvido integralmente caso a desistência ocorra em até 7 (sete) dias após o pagamento. <br>
+            3. DAS MENSALIDADES: Os valores referentes às mensalidades e materiais didáticos não serão devolvidos em caso de desistência após o início das atividades, visando cobrir custos operacionais e administrativos.<br>
+            4. RESPONSABILIDADE: É de inteira responsabilidade do aluno manter seus dados de contato (WhatsApp, E-mail e Endereço) atualizados junto à coordenação.<br>
+            5. CONDUTA: O aluno compromete-se a respeitar as diretrizes teístas e a fundamentação psicobíblica do método, abstendo-se de introduzir conceitos laicos ou esotéricos durante a formação.<br>
+            6. EFETIVAÇÃO: A inscrição só será considerada válida após o envio destes dados e a posterior validação da senha de acesso ao curso.
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="aceite" required>
+            <label for="aceite">Li e concordo com os termos e condições.</label>
+        </div>
+
+        <button type="button" onclick="enviarInscricao()">ENVIAR PARA CONFIRMAÇÃO</button>
+    </form>
+</div>
+
+<div class="footer-info">
+    Suporte via WhatsApp: 66 98466-6186
+</div>
+
+<script>
+    function enviarInscricao() {
+        const nome = document.getElementById('nome').value;
+        const zap = document.getElementById('whatsapp').value;
+        const aceite = document.getElementById('aceite').checked;
+
+        if(!nome || !zap || !aceite) {
+            alert("Por favor, preencha os dados e aceite os termos.");
+            return;
+        }
+
+        // Monta a mensagem para o WhatsApp
+        const mensagem = `Olá! Realizei minha inscrição na Formação Sincro.\nNome: ${nome}\nWhatsApp: ${zap}`;
+        const wpUrl = `https://wa.me/5566984666186?text=${encodeURIComponent(mensagem)}`;
+
+        // Abre o WhatsApp em uma nova aba
+        window.open(wpUrl, '_blank');
+
+        // Redireciona o App para a página de Efetivação
+        setTimeout(() => {
+            window.location.href = "2.html";
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>

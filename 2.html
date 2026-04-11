@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efetivação - Sincrologia</title>
+    <style>
+        :root {
+            --azul-escuro: #1a2a3a;
+            --dourado: #c9a441;
+            --branco: #ffffff;
+            --cinza-claro: #f4f4f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--cinza-claro);
+            color: var(--azul-escuro);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            padding: 30px 15px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .welcome-card {
+            background: var(--branco);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        /* Validação de Acesso */
+        .login-box {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid var(--dourado);
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .btn-acesso {
+            background-color: var(--dourado);
+            color: var(--azul-escuro);
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* FAQ Estilo Acordeão */
+        .faq-section { margin-top: 30px; }
+        .faq-item {
+            background: var(--branco);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+
+        .faq-pergunta {
+            padding: 15px;
+            background: var(--azul-escuro);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-resposta {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background: #fff;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .faq-item.active .faq-resposta {
+            max-height: 500px;
+            padding: 15px;
+        }
+
+        .destaque { color: var(--dourado); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BEM-VINDO À FORMAÇÃO</h1>
+    <p>Sincrologia: Ciência da Manutenção Existencial</p>
+</header>
+
+<div class="container">
+    <div class="welcome-card">
+        <h2>Parabéns pelo seu interesse!</h2>
+        <p>Você deu o primeiro passo para uma jornada de conhecimento tridimensional. Para efetivar seu acesso ao curso, insira a senha enviada pela coordenação abaixo.</p>
+        
+        <div class="login-box">
+            <input type="password" id="senhaEfetivacao" placeholder="Senha de Efetivação">
+            <button class="btn-acesso" onclick="validarEfetivacao()">Liberar Grade do Curso</button>
+            <p id="erro" style="color: red; display:none; margin-top:10px;">Senha incorreta. Verifique com o suporte.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2 style="text-align: center;">Dúvidas Frequentes (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">Afinal, o que é Sincrologia? <span>+</span></div>
+            <div class="faq-resposta">
+                É uma Ciência Comportamental que visa o ajuste e a manutenção emocional através do alinhamento das três esferas da existência: <span class="destaque">Corpo, Alma e Espírito</span>. O método busca a sincronia plena do indivíduo com sua realidade transitória.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">Quem criou o método? <span>+</span></div>
+            <div class="faq-resposta">
+                O método foi sistematizado por <span class="destaque">Gilberto Moreira</span>, Psicanalista e cristão com mais de 20 anos de experiência clínica. Através de uma vasta observação dos processos psicossomáticos e fenômenos sociais, ele desenvolveu uma abordagem baseada estritamente na descrição bíblica do ser humano e na fenomenologia existencial, distanciando-se de correntes puramente laicas.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">Sobre Regulamentação e MEC <span>+</span></div>
+            <div class="faq-resposta">
+                A Sincrologia é uma formação de natureza confessional e científica aplicada, fundamentada em convicções bíblicas. Como o <span class="destaque">MEC é uma pasta de um Estado Laico</span>, ele não possui competência para legislar sobre métodos baseados em regras de fé específicas. Nem todo cristão é um Sincroterapeuta, mas <span class="destaque">TODO Sincroterapeuta precisa ser cristão</span>, tornando a aprovação do Estado (que não tem religião) dispensável para a validade espiritual e metodológica da formação.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">Duração e Base Legal <span>+</span></div>
+            <div class="faq-resposta">
+                O curso tem duração de <span class="destaque">24 meses</span> no formato EAD. Está previsto na constituição e amparado pela Classificação Brasileira de Ocupações sob o código <span class="destaque">CBO 2515-50</span>.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">Terei de fazer Estágio e poderei atender? <span>+</span></div>
+            <div class="faq-resposta">
+                Sim. O estágio é a fase final e obrigatória que precede a certificação. Após a conclusão das avaliações e do estágio, o formando estará apto a atuar profissionalmente utilizando o método da <span class="destaque">Sincroterapia</span>.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">Posso receitar remédios? <span>+</span></div>
+            <div class="faq-resposta">
+                <span class="destaque">NÃO.</span> A Sincroterapia opera exclusivamente com recursos terapêuticos. Não receitamos remédios em hipótese alguma, sejam eles farmacológicos, homeopáticos ou fitoterápicos. O foco é a manutenção emocional e existencial.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">Quem pode participar? <span>+</span></div>
+            <div class="faq-resposta">
+                Pessoas com Ensino Médio Completo (comprovação via Histórico e Certificado). Por ser um método teísta cristão, <span class="destaque">não são admitidos alunos com viés ocultista, ateísta, umbandista, espírita</span> ou seguidores de qualquer filosofia que colida com a Única Regra de Fé adotada pela Sincrologia.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function toggleFaq(elemento) {
+        const item = elemento.parentElement;
+        item.classList.toggle('active');
+        const span = elemento.querySelector('span');
+        span.textContent = item.classList.contains('active') ? '-' : '+';
+    }
+
+    function validarEfetivacao() {
+        const senha = document.getElementById('senhaEfetivacao').value;
+        const erro = document.getElementById('erro');
+
+        if (senha === "focosincro") {
+            window.location.href = "3.html"; // Próxima página: Menu das Matérias
+        } else {
+            erro.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
