@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria 08 - Sincrologia</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 850px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .aula-img { width: 100%; max-width: 600px; display: block; margin: 25px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .pdf-box { background: #fff5f5; border: 1px solid #d32f2f; padding: 20px; border-radius: 5px; margin-bottom: 30px; text-align: center; }
+        .pdf-btn { background: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        .quiz-container { margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid var(--dourado); border-radius: 10px; }
+        .pergunta { font-weight: bold; margin: 20px 0 10px 0; display: block; color: var(--azul); border-left: 4px solid var(--dourado); padding-left: 10px; }
+        .opcao { display: block; margin-bottom: 8px; cursor: pointer; background: #f1f1f1; padding: 12px; border-radius: 6px; font-size: 0.95rem; }
+        .btn-finalizar { background: var(--azul); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        #resultado { margin-top: 25px; padding: 20px; border-radius: 5px; text-align: center; display: none; font-size: 1.2rem; }
+        #proxima-aula { display: none; text-align: center; margin-top: 25px; }
+        .btn-proxima { background: var(--dourado); color: var(--azul); padding: 18px; text-decoration: none; display: block; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MATÉRIA 08</h1>
+    <p style="letter-spacing: 1px;">TRIDIMENSIONALIDADE: A MECÂNICA DO ESTAR</p>
+</header>
+
+<div class="content">
+    <div class="pdf-box">
+        <p><strong>Material Didático de Apoio</strong></p>
+        <a href="material08.pdf" class="pdf-btn">📄 BAIXAR PDF (TRIDIMENSIONALIDADE)</a>
+    </div>
+
+    <article>
+        <h2>Modelo Operacional Integrado</h2>
+        <p>A Tridimensionalidade estabelece que o ser humano opera através de três dimensões integradas: <strong>Corpo</strong> (Hardware/Execução), <strong>Alma</strong> (Software/Processamento) e <strong>Espírito</strong> (Direção/Energia). A saúde do "Estar" depende da hierarquia correta: O Espírito governa, a Alma organiza e o Corpo responde.</p>
+        
+        <img src="8-img.png" alt="Esquema Tridimensional Sincrológico" class="aula-img">
+
+        <p>Através de intervenções técnicas como o Jejum (reset biológico e dopaminérgico) e a Oração (coerência neural e alinhamento espiritual), o formando aprende a restaurar a autoridade do sistema sobre o ruído existencial.</p>
+    </article>
+
+    <div class="quiz-container">
+        <h3 style="text-align: center; color: var(--azul);">AVALIAÇÃO DE PROFICIÊNCIA (MATÉRIA 08)</h3>
+        
+        <form id="quizForm">
+            <span class="pergunta">1. No modelo técnico operacional, qual a função específica da Alma?</span>
+            <label class="opcao"><input type="radio" name="p1" value="0"> A) Execução biológica e metabolismo.</label>
+            <label class="opcao"><input type="radio" name="p1" value="1"> B) Processamento de emoções, pensamentos e decisões.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> C) Fonte de energia e eixo de sentido espiritual.</label>
+
+            <span class="pergunta">2. O "Fluxo Invertido", que gera desordem e impulsividade, ocorre quando:</span>
+            <label class="opcao"><input type="radio" name="p2" value="1"> A) O Corpo domina, a Alma reage e o Espírito é silenciado.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> B) O Espírito governa e a Alma se organiza de forma coerente.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> C) O Córtex Pré-frontal assume a regulação do sistema límbico.</label>
+
+            <span class="pergunta">3. Tecnicamente, como o Jejum atua na regulação da dopamina?</span>
+            <label class="opcao"><input type="radio" name="p3" value="0"> A) Aumentando a saturação dopaminérgica através de prazeres rápidos.</label>
+            <label class="opcao"><input type="radio" name="p3" value="1"> B) Promovendo um reset neuroquímico e melhorando a sensibilidade aos receptores.</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> C) Inibindo a autofagia celular para preservar a energia do hardware.</label>
+
+            <span class="pergunta">4. Qual o efeito neurocientífico da Oração observado em estudos (Newberg, 2010)?</span>
+            <label class="opcao"><input type="radio" name="p4" value="1"> A) Melhora da coerência neural e conexão entre lógica e emoção.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> B) Ativação exclusiva e isolada do hemisfério cerebral esquerdo.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> C) Redução da atividade no giro do cíngulo e no córtex pré-frontal.</label>
+
+            <span class="pergunta">5. O Ruído no Espírito é diagnosticado tecnicamente por:</span>
+            <label class="opcao"><input type="radio" name="p5" value="0"> A) Fadiga muscular e desregulação metabólica.</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> B) Ansiedade e instabilidade emocional crônica.</label>
+            <label class="opcao"><input type="radio" name="p5" value="1"> C) Perda de direção, vazio existencial e desalinhamento com o Criador.</label>
+
+            <span class="pergunta">6. (V ou F) A Tridimensionalidade na Sincrologia é um conceito meramente simbólico e não funcional.</span>
+            <label class="opcao"><input type="radio" name="p6" value="0"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p6" value="1"> F - Falso</label>
+
+            <span class="pergunta">7. (V ou F) O Jejum reduz o ruído biológico, permitindo que o espírito assuma a direção do sistema.</span>
+            <label class="opcao"><input type="radio" name="p7" value="1"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p7" value="0"> F - Falso</label>
+
+            <span class="pergunta">8. (V ou F) De acordo com Tiago 4:7, a autoridade espiritual depende da sujeição a Deus e da resistência ativa.</span>
+            <label class="opcao"><input type="radio" name="p8" value="1"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> F - Falso</label>
+
+            <span class="pergunta">9. (V ou F) Sintomas como fadiga e compulsões são indicadores técnicos de ruído localizado na Alma.</span>
+            <label class="opcao"><input type="radio" name="p9" value="0"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p9" value="1"> F - Falso (São ruídos do Corpo)</label>
+
+            <span class="pergunta">10. (V ou F) "Quando o Espírito governa, a Alma se organiza e o Corpo responde em ordem."</span>
+            <label class="opcao"><input type="radio" name="p10" value="1"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> F - Falso</label>
+
+            <button type="button" class="btn-finalizar" onclick="corrigir()">FINALIZAR AVALIAÇÃO</button>
+        </form>
+
+        <div id="resultado"></div>
+        <div id="proxima-aula">
+            <a href="12.html" class="btn-proxima">AVANÇAR PARA MATÉRIA 09</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function corrigir() {
+        const resp = new FormData(document.getElementById('quizForm'));
+        let nota = 0; let total = 0;
+        for (let v of resp.values()) { nota += parseInt(v); total++; }
+
+        if(total < 10) { alert("Responda todas as 10 questões para concluir."); return; }
+
+        const resDiv = document.getElementById('resultado');
+        resDiv.style.display = "block";
+        if(nota >= 8) {
+            resDiv.innerHTML = "APROVADO! NOTA: " + nota + "/10<br>Sincronia tridimensional validada.";
+            resDiv.style.background = "#d4edda";
+            resDiv.style.color = "#155724";
+            document.getElementById('proxima-aula').style.display = "block";
+            localStorage.setItem('materia08', 'concluido');
+        } else {
+            resDiv.innerHTML = "REPROVADO. NOTA: " + nota + "/10<br>Necessário revisar a integração entre Corpo, Alma e Espírito.";
+            resDiv.style.background = "#f8d7da";
+            resDiv.style.color = "#721c24";
+        }
+    }
+</script>
+</body>
+</html>
