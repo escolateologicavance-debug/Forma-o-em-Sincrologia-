@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria 03 - Sincrologia</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 850px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .aula-img { width: 100%; max-width: 600px; display: block; margin: 25px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .pdf-box { background: #fff5f5; border: 1px solid #d32f2f; padding: 20px; border-radius: 5px; margin-bottom: 30px; text-align: center; }
+        .pdf-btn { background: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        .quiz-container { margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid var(--dourado); border-radius: 10px; }
+        .pergunta { font-weight: bold; margin: 20px 0 10px 0; display: block; color: var(--azul); border-left: 4px solid var(--dourado); padding-left: 10px; }
+        .opcao { display: block; margin-bottom: 8px; cursor: pointer; background: #f1f1f1; padding: 12px; border-radius: 6px; font-size: 0.95rem; }
+        .btn-finalizar { background: var(--azul); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        #resultado { margin-top: 25px; padding: 20px; border-radius: 5px; text-align: center; display: none; font-size: 1.2rem; }
+        #proxima-aula { display: none; text-align: center; margin-top: 25px; }
+        .btn-proxima { background: var(--dourado); color: var(--azul); padding: 18px; text-decoration: none; display: block; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MATÉRIA 03</h1>
+    <p style="letter-spacing: 1px;">FÍSICA DA EXISTÊNCIA: TEMPO E ESPAÇO NO "ESTAR"</p>
+</header>
+
+<div class="content">
+    <div class="pdf-box">
+        <p><strong>Material de Apoio Bíblico</strong></p>
+        <a href="material03.pdf" class="pdf-btn">📄 BAIXAR PDF (FÍSICA DA EXISTÊNCIA)</a>
+    </div>
+
+    <article>
+        <h2>As Leis da Transitoriedade</h2>
+        <p>A Física da Existência na Sincrologia trata da aceitação das leis naturais estabelecidas. O foco é a gestão emocional diante da finitude e das limitações do corpo físico, sempre sob a luz da Palavra.</p>
+        
+        <img src="1-img.png" alt="1-img.png" class="aula-img">
+
+        <p>Entender que o "Estar" é limitado pelo tempo permite que o <strong>formando</strong> qualifique sua presença no agora, eliminando a ansiedade por fatores incontroláveis da matéria.</p>
+    </article>
+
+    <div class="quiz-container">
+        <h3 style="text-align: center; color: var(--azul);">AVALIAÇÃO DE PROFICIÊNCIA</h3>
+        
+        <form id="quizForm">
+            <span class="pergunta">1. O que define a Física da Existência no método Sincrológico?</span>
+            <label class="opcao"><input type="radio" name="p1" value="0"> A) O estudo das partículas atômicas para cura física.</label>
+            <label class="opcao"><input type="radio" name="p1" value="1"> B) O entendimento das leis naturais e da transitoriedade do corpo e tempo.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> C) A negação das leis da gravidade através da fé Bíblica.</label>
+
+            <span class="pergunta">2. Qual é a relação entre "Estar" e "Tempo" nesta matéria?</span>
+            <label class="opcao"><input type="radio" name="p2" value="1"> A) O tempo é a dimensão onde o estado de Estar deve ser qualificado.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> B) O tempo não existe para quem alcança a sincronia total.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> C) O tempo é um inimigo que deve ser combatido com técnicas de gestão.</label>
+
+            <span class="pergunta">3. A finitude do corpo físico é encarada pela Sincrologia como:</span>
+            <label class="opcao"><input type="radio" name="p3" value="0"> A) Um erro biológico que a ciência deve corrigir.</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> B) Uma punição espiritual para a alma negligente.</label>
+            <label class="opcao"><input type="radio" name="p3" value="1"> C) Uma lei natural do Criador que exige aceitação e gestão do presente.</label>
+
+            <span class="pergunta">4. O ruído existencial causado pela "fuga do agora" gera:</span>
+            <label class="opcao"><input type="radio" name="p4" value="1"> A) Ansiedade e desalinhamento da tridimensionalidade.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> B) Maior capacidade de planejamento futuro estratégico.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> C) Evolução da consciência para além do corpo físico.</label>
+
+            <span class="pergunta">5. Como o formando qualifica seu "Estar" diante da física existencial?</span>
+            <label class="opcao"><input type="radio" name="p5" value="0"> A) Buscando a imortalidade do Ser através de orações.</label>
+            <label class="opcao"><input type="radio" name="p5" value="1"> B) Sincronizando suas emoções com a realidade das limitações presentes.</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> C) Ignorando as necessidades do corpo em favor do espírito.</label>
+
+            <span class="pergunta">6. Na Sincrologia, o corpo é definido como:</span>
+            <label class="opcao"><input type="radio" name="p6" value="1"> A) O invólucro transitório que necessita de manutenção e ordem.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> B) A parte mais importante e eterna do ser humano.</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> C) Uma ilusão passageira que não interfere na gestão emocional.</label>
+
+            <span class="pergunta">7. A gestão emocional Bíblica ensina que a paz provém de:</span>
+            <label class="opcao"><input type="radio" name="p7" value="0"> A) Controlar todas as variáveis externas da vida.</label>
+            <label class="opcao"><input type="radio" name="p7" value="1"> B) Aceitar a soberania do Criador sobre o tempo e o espaço.</label>
+            <label class="opcao"><input type="radio" name="p7" value="0"> C) Projetar a felicidade apenas para o futuro pós-morte.</label>
+
+            <span class="pergunta">8. O termo "Existente Terciário" reforça que o homem:</span>
+            <label class="opcao"><input type="radio" name="p8" value="1"> A) Não possui autoexistência e depende de leis externas.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> B) É o terceiro ser mais poderoso do universo.</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> C) Pode criar sua própria realidade física apenas com o pensamento.</label>
+
+            <span class="pergunta">9. Tentar tornar permanente o que é transitório resulta em:</span>
+            <label class="opcao"><input type="radio" name="p9" value="0"> A) Sucesso no desenvolvimento pessoal a longo prazo.</label>
+            <label class="opcao"><input type="radio" name="p9" value="1"> B) Sofrimento emocional por lutar contra a realidade física.</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> C) Fortalecimento da alma contra as intempéries da vida.</label>
+
+            <span class="pergunta">10. A Física da Existência é, em última análise, um convite para:</span>
+            <label class="opcao"><input type="radio" name="p10" value="0"> A) Estudar astronomia e ciências exatas.</label>
+            <label class="opcao"><input type="radio" name="p10" value="0"> B) Abandonar as responsabilidades materiais.</label>
+            <label class="opcao"><input type="radio" name="p10" value="1"> C) Viver a gestão emocional plena no palco do presente.</label>
+
+            <button type="button" class="btn-finalizar" onclick="corrigir()">FINALIZAR AVALIAÇÃO</button>
+        </form>
+
+        <div id="resultado"></div>
+        <div id="proxima-aula">
+            <a href="7.html" class="btn-proxima">AVANÇAR PARA MATÉRIA 04</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function corrigir() {
+        const resp = new FormData(document.getElementById('quizForm'));
+        let nota = 0; let total = 0;
+        for (let v of resp.values()) { nota += parseInt(v); total++; }
+
+        if(total < 10) { alert("Responda todas as 10 questões."); return; }
+
+        const resDiv = document.getElementById('resultado');
+        resDiv.style.display = "block";
+        if(nota >= 7) {
+            resDiv.innerHTML = "APROVADO! NOTA: " + nota;
+            resDiv.style.background = "#d4edda";
+            resDiv.style.color = "#155724";
+            document.getElementById('proxima-aula').style.display = "block";
+            localStorage.setItem('materia03', 'concluido');
+        } else {
+            resDiv.innerHTML = "REPROVADO. NOTA: " + nota + "<br>Revise o material Bíblico.";
+            resDiv.style.background = "#f8d7da";
+            resDiv.style.color = "#721c24";
+        }
+    }
+</script>
+</body>
+</html>
