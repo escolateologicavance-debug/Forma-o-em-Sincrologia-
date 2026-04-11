@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria 10 - Sincroterapia Clínica</title>
+    <style>
+        :root { --azul: #1a2a3a; --dourado: #c9a441; --gelo: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gelo); margin: 0; padding: 0; color: var(--azul); line-height: 1.6; }
+        header { background: var(--azul); color: white; padding: 30px 20px; text-align: center; border-bottom: 5px solid var(--dourado); }
+        .content { max-width: 850px; margin: 20px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .aula-img { width: 100%; max-width: 600px; display: block; margin: 25px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .pdf-box { background: #fff5f5; border: 1px solid #d32f2f; padding: 20px; border-radius: 5px; margin-bottom: 30px; text-align: center; }
+        .pdf-btn { background: #d32f2f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        
+        .quiz-container { margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid var(--dourado); border-radius: 10px; }
+        .pergunta { font-weight: bold; margin: 20px 0 10px 0; display: block; color: var(--azul); border-left: 4px solid var(--dourado); padding-left: 10px; }
+        .opcao { display: block; margin-bottom: 8px; cursor: pointer; background: #f1f1f1; padding: 12px; border-radius: 6px; font-size: 0.95rem; }
+        .btn-finalizar { background: var(--azul); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        #resultado { margin-top: 25px; padding: 20px; border-radius: 5px; text-align: center; display: none; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MATÉRIA 10</h1>
+    <p style="letter-spacing: 1px;">SINCROTERAPIA CLÍNICA: A ENGENHARIA DA COERÊNCIA</p>
+</header>
+
+<div class="content">
+    <div class="pdf-box">
+        <p><strong>Material Didático de Apoio</strong></p>
+        <a href="material10.pdf" class="pdf-btn">📄 BAIXAR PDF (SINCROTERAPIA CLÍNICA)</a>
+    </div>
+
+    <article>
+        <h2>O Terapeuta como Gestor de Coerência</h2>
+        <p>A Sincroterapia Clínica é a aplicação prática que substitui a investigação do passado pela intervenção objetiva no presente. O critério de sucesso não é o "sentir", mas o "executar". Através do <strong>Medidor de Coerência (MC)</strong> e da aferição da <strong>Frequência Média Pessoal (P11)</strong>, o terapeuta identifica o ponto de ruptura do sistema e aplica protocolos imediatos para restaurar a funcionalidade.</p>
+        
+        <img src="10-img.png" alt="Esquema Clínico Sincro" class="aula-img">
+
+        <p><em>"Quem mede, ajusta. Quem ajusta, governa."</em></p>
+    </article>
+
+    <div class="quiz-container">
+        <h3 style="text-align: center; color: var(--azul);">AVALIAÇÃO DE PROFICIÊNCIA CLÍNICA</h3>
+        
+        <form id="quizForm">
+            <span class="pergunta">1. Segundo a definição clínica, qual a função do terapeuta sincrológico?</span>
+            <label class="opcao"><input type="radio" name="p1" value="0"> A) Interpretar traumas e explorar narrativas longas.</label>
+            <label class="opcao"><input type="radio" name="p1" value="1"> B) Atuar como gestor de coerência existencial e identificar desalinhamentos.</label>
+            <label class="opcao"><input type="radio" name="p1" value="0"> C) Ouvir histórias para oferecer acolhimento puramente emocional.</label>
+
+            <span class="pergunta">2. Qual o fundamento central da cura na Sincroterapia Clínica?</span>
+            <label class="opcao"><input type="radio" name="p2" value="1"> A) A cura vem da instrução e da ação objetiva, não da exposição.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> B) A cura depende da compreensão profunda do passado do indivíduo.</label>
+            <label class="opcao"><input type="radio" name="p2" value="0"> C) A cura é o resultado de sessões prolongadas de escuta analítica.</label>
+
+            <span class="pergunta">3. O Medidor de Coerência (MC) tem como função neurocientífica principal:</span>
+            <label class="opcao"><input type="radio" name="p3" value="0"> A) Apenas registrar o humor do paciente para fins estatísticos.</label>
+            <label class="opcao"><input type="radio" name="p3" value="1"> B) Transformar subjetividade em métrica para que o cérebro possa ajustar o comportamento.</label>
+            <label class="opcao"><input type="radio" name="p3" value="0"> C) Substituir a necessidade de qualquer intervenção espiritual.</label>
+
+            <span class="pergunta">4. Na escala da Frequência Média Pessoal (P11), o que indica uma faixa de 0 a 6.9?</span>
+            <label class="opcao"><input type="radio" name="p4" value="1"> A) Status de CAOS com falha estrutural no sistema.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> B) Status de CALIBRAÇÃO com instabilidade leve.</label>
+            <label class="opcao"><input type="radio" name="p4" value="0"> C) Status SUSTENTADO com autossuficiência funcional.</label>
+
+            <span class="pergunta">5. Qual protocolo clínico é utilizado como "alavanca mental" através da organização física?</span>
+            <label class="opcao"><input type="radio" name="p5" value="0"> B) Protocolo P+5</label>
+            <label class="opcao"><input type="radio" name="p5" value="1"> A) Protocolo PMCC (Cômodo-Chave)</label>
+            <label class="opcao"><input type="radio" name="p5" value="0"> C) Protocolo ROI</label>
+
+            <span class="pergunta">6. (V ou F) O critério de validação clínica na Sincroterapia não é o que o paciente sente, mas o que ele executa.</span>
+            <label class="opcao"><input type="radio" name="p6" value="1"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p6" value="0"> F - Falso</label>
+
+            <span class="pergunta">7. (V ou F) Segundo a regra do diagnóstico sincroterapêutico, a nota funcional mais alta revela o ponto de ruptura do sistema.</span>
+            <label class="opcao"><input type="radio" name="p7" value="0"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p7" value="1"> F - Falso (É a menor nota que revela o ponto de ruptura)</label>
+
+            <span class="pergunta">8. (V ou F) O Protocolo P+5 foca na ação mínima e imediata para quebrar a inércia, baseado na ciência de micro-hábitos.</span>
+            <label class="opcao"><input type="radio" name="p8" value="1"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p8" value="0"> F - Falso</label>
+
+            <span class="pergunta">9. (V ou F) A postura clínica do sincroterapeuta deve ser marcada por objetividade, firmeza e ausência de emocionalismo.</span>
+            <label class="opcao"><input type="radio" name="p9" value="1"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p9" value="0"> F - Falso</label>
+
+            <span class="pergunta">10. (V ou F) A Sincroterapia Clínica visa garantir estabilidade permanente, eliminando todas as aflições do mundo.</span>
+            <label class="opcao"><input type="radio" name="p10" value="0"> V - Verdadeiro</label>
+            <label class="opcao"><input type="radio" name="p10" value="1"> F - Falso (Recaídas existem; o foco é restaurar o alinhamento rapidamente)</label>
+
+            <button type="button" class="btn-finalizar" onclick="corrigir()">FINALIZAR AVALIAÇÃO</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+</div>
+
+<script>
+    function corrigir() {
+        const resp = new FormData(document.getElementById('quizForm'));
+        let nota = 0; let total = 0;
+        for (let v of resp.values()) { nota += parseInt(v); total++; }
+
+        if(total < 10) { alert("Responda todas as 10 questões."); return; }
+
+        const resDiv = document.getElementById('resultado');
+        resDiv.style.display = "block";
+        if(nota >= 8) {
+            resDiv.innerHTML = "APROVADO! NOTA: " + nota + "/10<br>Capacitação clínica validada com sucesso.";
+            resDiv.style.background = "#d4edda";
+            resDiv.style.color = "#155724";
+        } else {
+            resDiv.innerHTML = "REPROVADO. NOTA: " + nota + "/10<br>Revise os protocolos e métricas (P11/MC).";
+            resDiv.style.background = "#f8d7da";
+            resDiv.style.color = "#721c24";
+        }
+    }
+</script>
+</body>
+</html>
